@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Albums</title>
+</head>
+<header>
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://cdn0.iconfinder.com/data/icons/audio-vol-1b/100/1-41-512.png" width="30" height="30" class="d-inline-block align-top offset-1" alt="" >
+            Albums!
+        </a>
+    </nav>
+</header>
+<body>
+<br/>
+<div class="container">
+    <div class="row">
+        <div class="col p-3 border bg-light">
+            <div class="card offset-1" style="width: 18rem;">
+                <img th:src="${album.get(0).getImageUrl()}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 th:text="${album.get(0).getTitle()}"></h3>
+                    <p th:text="'Artist: '+${album.get(0).getArtist()}"></p>
+                    <p th:text="'Length: '+${album.get(0).getLength()}+ ' seconds'"></p>
+                    <p th:text="'Number of songs: '+${album.get(0).getSongCount()}"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col p-3 offset-1 border bg-light">
+            <div class="card offset-1" style="width: 18rem;">
+                <img th:src="${album.get(1).getImageUrl()}" class="card-img-top " alt="...">
+                <div class="card-body">
+                    <h3 th:text="${album.get(1).getTitle()}"></h3>
+                    <p th:text="'Artist: '+${album.get(1).getArtist()}"></p>
+                    <p th:text="'Length: '+${album.get(1).getLength()}+ ' seconds'"></p>
+                    <p th:text="'Number of songs: '+${album.get(1).getSongCount()}"></p>
+                </div>
+            </div></div>
+        <div class="col offset-1 p-3 border bg-light">
+            <div class="card offset-1" style="width: 18rem;">
+                <img th:src="${album.get(2).getImageUrl()}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 th:text="${album.get(2).getTitle()}"></h3>
+                    <p th:text="'Artist: '+${album.get(2).getArtist()}"></p>
+                    <p th:text="'Length: '+${album.get(2).getLength()}+ ' seconds'"></p>
+                    <p th:text="'Number of songs: '+${album.get(2).getSongCount()}"></p>
+                </div>
+            </div></div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+</body>
+</html>
