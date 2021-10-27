@@ -37,4 +37,8 @@ public class HelloWorldController {
         model.addAttribute("album", albumList);
         return "album";
     }
+    @GetMapping
+    public String home(){
+        return "home";
+    }
 }
