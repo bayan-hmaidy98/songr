@@ -22,36 +22,15 @@
 <body>
 <br/>
 <div class="container">
-    <div class="row">
-        <div class="col p-3 border bg-light">
-            <div class="card offset-1" style="width: 18rem;">
-                <img th:src="${album.get(0).getImageUrl()}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h3 th:text="${album.get(0).getTitle()}"></h3>
-                    <p th:text="'Artist: '+${album.get(0).getArtist()}"></p>
-                    <p th:text="'Length: '+${album.get(0).getLength()}+ ' seconds'"></p>
-                    <p th:text="'Number of songs: '+${album.get(0).getSongCount()}"></p>
-                </div>
-            </div>
-        </div>
-        <div class="col p-3 offset-1 border bg-light">
-            <div class="card offset-1" style="width: 18rem;">
-                <img th:src="${album.get(1).getImageUrl()}" class="card-img-top " alt="...">
-                <div class="card-body">
-                    <h3 th:text="${album.get(1).getTitle()}"></h3>
-                    <p th:text="'Artist: '+${album.get(1).getArtist()}"></p>
-                    <p th:text="'Length: '+${album.get(1).getLength()}+ ' seconds'"></p>
-                    <p th:text="'Number of songs: '+${album.get(1).getSongCount()}"></p>
-                </div>
-            </div></div>
+    <div class="row" th:each="album: ${album}">
         <div class="col offset-1 p-3 border bg-light">
             <div class="card offset-1" style="width: 18rem;">
-                <img th:src="${album.get(2).getImageUrl()}" class="card-img-top" alt="...">
+                <img th:src="${album.getImageUrl()}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h3 th:text="${album.get(2).getTitle()}"></h3>
-                    <p th:text="'Artist: '+${album.get(2).getArtist()}"></p>
-                    <p th:text="'Length: '+${album.get(2).getLength()}+ ' seconds'"></p>
-                    <p th:text="'Number of songs: '+${album.get(2).getSongCount()}"></p>
+                    <h3 th:text="${album.getTitle()}"></h3>
+                    <p th:text="'Artist: '+${album.getArtist()}"></p>
+                    <p th:text="'Length: '+${album.getLength()}+ ' seconds'"></p>
+                    <p th:text="'Number of songs: '+${album.getSongCount()}"></p>
                 </div>
             </div></div>
     </div>

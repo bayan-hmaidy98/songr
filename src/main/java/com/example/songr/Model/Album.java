@@ -1,11 +1,24 @@
 
-package com.example.songr;
+package com.example.songr.Model;
 
+import javax.persistence.*;
 
+@Entity // this will be dealt with as a model will be reflected in the db
 public class Album {
 
 
+    public long getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String title;
 
     public String getTitle() {
