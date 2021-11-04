@@ -22,15 +22,15 @@
 <body>
 <br/>
 <div class="container">
-    <div class="row" th:each="album: ${album}">
+    <div class="row" th:each="album: ${addalbum}">
         <div class="col offset-1 p-3 border bg-light">
             <div class="card offset-1" style="width: 18rem;">
-                <img th:src="${album.getImageUrl()}" class="card-img-top" alt="...">
+                <img th:src="${album.cover}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h3 th:text="${album.getTitle()}"></h3>
-                    <p th:text="'Artist: '+${album.getArtist()}"></p>
-                    <p th:text="'Length: '+${album.getLength()}+ ' seconds'"></p>
-                    <p th:text="'Number of songs: '+${album.getSongCount()}"></p>
+                    <h3 th:text="${album.title}"></h3>
+                    <p th:text="'Artist: '+${album.artist}"></p>
+                    <p th:text="'Length: '+${album.albumLength}+ ' seconds'"></p>
+                    <p th:text="'Number of songs: '+${album.songsNumber}"></p>
                 </div>
             </div></div>
     </div>
