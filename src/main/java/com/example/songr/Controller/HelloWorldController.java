@@ -41,13 +41,13 @@ public class HelloWorldController {
     }
     @GetMapping("/addalbums")
     public String addAlbumPage() {
-        return "addAlbum";
+        return "addalbum";
     }
 
 
             @PostMapping("/addalbums")
             public RedirectView createAlbum(Album album){
                 albumRepository.save(album);
-                return new RedirectView("/albums");
+                return new RedirectView("/album");
             }
 }
